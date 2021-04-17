@@ -38,7 +38,10 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I", "C:\\Users\\jkl41\\vscode\\boost_1_76_0",
+                "-L", "C:\\Users\\jkl41\\vscode\\boost_1_76_0\\stage\\lib",
+                "-I", "C:\\Program Files\\OpenSSL-Win64"
             ],
             "group": "build",
             //컴파일시 에러를 편집기에 반영
@@ -68,7 +71,9 @@
             "group": "test",
             "args": [
                 "/C",
-                "${fileDirname}\\${fileBasenameNoExtension}"
+                "${fileDirname}\\${fileBasenameNoExtension}",
+                "-I", "C:\\Users\\jkl41\\vscode\\boost_1_76_0",
+                "-I", "C:\\Program Files\\OpenSSL-Win64"
             ]
         }
     ]
