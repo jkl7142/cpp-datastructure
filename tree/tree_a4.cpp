@@ -36,16 +36,14 @@ public:
             return find_impl(cwd, path);
     }
 
-    // TODO : 
-    // 1. 함수 분석
-    // 2. std::string::npos
+    // std::str.find("") : str에서 단어를 찾고 없으면 string::npos를 반환한다
 private:
     node_ptr find_impl(node_ptr directory, const std::string& path) {
         if (path.empty())
             return directory;
         auto sep = path.find('/');
-        std::string current_path = sep == std::string::npos ? path : path.substr(0, sep);
-        std::string rest_path = sep == std::string::npos ? "" : path.substr(sep + 1);
+        std::string current_path = sep == std::string::npos ? path : path.substr(0, sep);   // '/'가 있으면 맨 첫번째 문자열
+        std::string rest_path = sep == std::string::npos ? "" : path.substr(sep + 1);       // '/'가 있으면 첫번째 '/' 다음 모든 문자열
         auto found = std::find_if(directory->children.begin(), directory->children.end(),
             [&](const node_ptr child) {
                 return child->name == current_path;
