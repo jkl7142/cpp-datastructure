@@ -41,7 +41,10 @@
                 "${fileDirname}/${fileBasenameNoExtension}",
                 "-I", "C:\\Users\\jkl41\\vscode\\boost_1_76_0",
                 "-L", "C:\\Users\\jkl41\\vscode\\boost_1_76_0\\stage\\lib",
-                "-I", "C:\\Program Files\\OpenSSL-Win64"
+                "-I", "C:\\Program Files\\OpenSSL-Win64",
+                "-I", "C:\\Program Files\\OpenSSL-Win64\\include",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\lib",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\include\\openssl\\crypto",
             ],
             "group": "build",
             //컴파일시 에러를 편집기에 반영
