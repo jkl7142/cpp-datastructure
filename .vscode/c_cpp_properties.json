@@ -5,8 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:\\Users\\jkl41\\vscode\\boost_1_76_0",
-                "C:\\Program Files\\OpenSSL-Win64",
-                "C:\\Program Files\\OpenSSL-Win64\\include"
+                "C:\\Program Files\\OpenSSL-Win64"
             ],
             "defines": [
                 "_DEBUG",
